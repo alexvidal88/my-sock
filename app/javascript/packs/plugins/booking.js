@@ -2,7 +2,7 @@ import flatpickr from 'flatpickr';
 
 // First we define two variables that are going to grab our inputs field. You can check the ids of the inputs with the Chrome inspector.
 
-const datePicker = function() => {
+const datePicker = () => {
   const startDateInput = document.getElementById('booking_start_date');
   const endDateInput = document.getElementById('booking_end_date');
 
