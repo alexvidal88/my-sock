@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <div class="navbar-lewagon">
-      <div class="logo"></div>
-    </div>
     <title>Rbnb</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -18,8 +15,23 @@
   </head>
 
   <body>
+  <nav class="navbar navbar-light bg-light">
+      <div class ="logo"></div>
+      <form class="form-inline">
+      <button class="btn btn-outline-primary" type="button">Sign Up</button>
+      <div style="padding-left: 10px;">
+      <button class="btn btn-outline-success" type="button">Home</button>
+      </div>
+      </form>
+    </nav>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
     <%= yield %>
+    <div class="footer bg-light">
+    <div class="footer_contents">
+      <p>made by Alex & Armand</p>
+    </div>
+  </div>
   </body>
 </html>
+

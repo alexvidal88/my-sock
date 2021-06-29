@@ -1,7 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background-color: white ;
-  height: 50px;
+  background-color: black;
+  height: 80px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -12,10 +12,7 @@
   width: 40px;
 
 }
-
-.logo {
-  background-image: asset-url('logo.png');
-  background-size: cover;
-  height: 50px;
-  width: 80px;
+.btn {
+  height: 80px;
+  width: 150px;
 }
