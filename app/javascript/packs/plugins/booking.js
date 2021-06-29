@@ -32,5 +32,4 @@ const datePicker = function() => {
   };
 };
 
-
 export { datePicker };

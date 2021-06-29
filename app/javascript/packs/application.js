@@ -26,7 +26,7 @@ import "bootstrap";
 import flatpickr from "flatpickr";
 
 
-import { datePicker } from "./plugins/booking"
+import { datePicker } from "./plugins/booking.js"
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
