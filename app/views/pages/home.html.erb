@@ -1,6 +1,24 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="home-banner">
+  <h1>Find the sock your missing</h1>
+</div>
+<br>
+<div class="button" >
 
+    <%= link_to 'find socks',  @socks, :class => "btn btn-primary btn-lg" %>
+    <%= link_to 'list your socks', @socks,:class => "btn btn-primary btn-lg" %>
+    <%= link_to 'log-in/sign-int',@socks , :class => "btn btn-primary btn-lg" %>
+
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 <% if user_signed_in? %>
 <%= current_user.email %>
 <% end %>
