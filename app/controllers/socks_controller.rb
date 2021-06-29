@@ -14,14 +14,15 @@ class SocksController < ApplicationController
 
   def create
     @sock = Sock.new(sock_params)
+    @sock.user = current_user
     @sock.save
-    redirect_to socks_path
+    redirect_to sock_path(@sock)
   end
 
   private
 
   def sock_params
-    params.require(:sock).permit(:name, :price, :description, :user_id)
+    params.require(:sock).permit(:name, :price, :description, :photo)
   end
 
 end

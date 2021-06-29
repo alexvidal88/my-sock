@@ -1,6 +1,7 @@
 
 <div class="card" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
+  <%= cl_image_tag @sock.photo.key, height: 300, width: 400, crop: :fill %>
   <div class="card-body">
     <h5 class="card-title"><%= @sock.name %></h5>
     <p class="card-text"><%= @sock.description %></p>
