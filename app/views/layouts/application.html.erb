@@ -8,12 +8,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
+
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
   <body>
+  <nav class="navbar navbar-light bg-light">
+      <div class ="logo"></div>
+      <form class="form-inline">
+      <button class="btn btn-outline-primary" type="button">Sign Up</button>
+      <div style="padding-left: 10px;">
+      <button class="btn btn-outline-success" type="button">Home</button>
+      </div>
+      </form>
+    </nav>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
     <%= yield %>
+    <div class="footer bg-light">
+    <div class="footer_contents">
+      <p>made by Alex & Armand</p>
+    </div>
+  </div>
   </body>
 </html>
+
