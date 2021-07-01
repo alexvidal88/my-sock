@@ -11,16 +11,20 @@
 #   t.integer "price"
 #   t.text "description"
 #
+
+user = User.create(first_name: "user", last_name: "test", email: "user@user.com", password: "password")
 data = File.read('public/socks_seeds.json')
 new_socks = JSON.parse(data)
 new_socks['socks'].each do |new_sock|
   created_sock = Sock.new(
-    name: new_plant['name'],
-    price: new_plant['price'],
-    description: new_plant['description']
+    name: new_sock['name'],
+    price: new_sock['price'],
+    description: new_sock['description']
   )
-end
 
- file = URI.open(new_sock['image.url'])
+
+ file = URI.open(new_sock['photo'])
  created_sock.photo.attach(io: file, filename: "#{created_sock.name}.jpg", content_type: 'image/jpg')
+ created_sock.user = user
  created_sock.save!
+end
