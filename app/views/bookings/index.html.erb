@@ -9,7 +9,11 @@
        <p><%= booking.start_date %> </p>
         <p><%= booking.end_date %></p>
         <p><%= booking.status %></p>
+        <a href="#" class="card-link"><%= link_to "Delete Booking", sock_path(@sock), method: :delete,  data: { confirm: "Are you sure you want to remove it from your list"}  %>
+        </a>
       </div>
     <% end %>
   </div>
 </div>
+
+
