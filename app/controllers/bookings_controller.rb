@@ -16,6 +16,7 @@ class BookingsController < ApplicationController
     @sock = Sock.find(params[:sock_id])
     @booking.user = current_user
     @booking.sock = @sock
+    @booking.status = "Pending owner validation"
     if @booking.save
       redirect_to sock_path(@sock)
     else
@@ -24,19 +25,20 @@ class BookingsController < ApplicationController
   end
 
   def update
+    @booking.status = "Pending owner validation"
     @booking.update(booking_params)
     redirect_to booking_path(@booking)
   end
 
   def destroy
     @booking.destroy
-    redirect_to sock_path
+    redirect_to root_path
   end
 
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date, :status)
   end
 
   def set_booking
