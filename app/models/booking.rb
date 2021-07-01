@@ -4,6 +4,7 @@ class Booking < ApplicationRecord
 
   validates :start_date, :end_date, presence: true
   validate :end_date_after_start_date
+  validates :status, inclusion: { in: ["Pending owner validation", "Confirmed", "Canceled"], allow_nil: true }
 
   private
 
@@ -15,3 +16,5 @@ class Booking < ApplicationRecord
     end
   end
 end
+
+
