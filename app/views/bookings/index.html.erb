@@ -4,7 +4,7 @@
     <h3 class="mb-0">My Bookings</h3>
   </div>
   <div class="row">
-    <% @bookings.each do |booking| %>
+    <% @sock.bookings.each do |booking| %>
       <div class="co-12 colsm-6 col-md-4 mb-3">
         <h3><%= booking.sock.name%></h3>
        <p><%= booking.start_date %> </p>
