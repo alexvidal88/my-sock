@@ -3,18 +3,20 @@
  <p> <%= current_user.first_name %> </p>
 <% end %>
 
-<div class= "home-banner">
-  <h1>Find the sock your missing</h1>
-</div>
-<br>
-<div class="button" >
 
-    <%= link_to 'find socks',  @socks, :class => "btn btn-primary btn-lg" %>
+<div class="home-banner">
+  <h1>
+  <span id="banner-typed-text"></span>
+  </h1>
+</br>
+  <div class="button" >
     <%= link_to 'list your socks', @socks,:class => "btn btn-primary btn-lg" %>
-    <%= link_to 'log-in/sign-int',@socks , :class => "btn btn-primary btn-lg" %>
-
+    <%= link_to 'log-in/sign-in',@socks , :class => "btn btn-primary btn-lg" %>
   </div>
-<br>
+</div>
+<%= render "shared/footer" %>
+
+
 
 
 
