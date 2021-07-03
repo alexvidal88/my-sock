@@ -1,7 +1,7 @@
 .home-banner {
   background-image: url('https://www.melbournecentral.com.au/Upload/MelbourneCentral/Media/Store-Hero/Socks-Club-Banner.jpg?ext=.jpg');
   background-size: cover;
-  height: 400px;
+  height: 900px;
   width: cover;
   color: #eee;
   text-align: center;
@@ -19,3 +19,41 @@
  width: 300px;
 }
 
+.btn-lg, .btn-group-lg > .btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 10px;
+}
+
+a.button2{
+  display:inline-block;
+  padding:0.5em 3em;
+  border:0.16em solid #FFFFFF;
+  margin:0 0.3em 0.3em 0;
+  box-sizing: border-box;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-family:'Roboto',sans-serif;
+  font-weight:400;
+  color:#FFFFFF;
+  text-align:center;
+  transition: all 0.15s;
+}
+
+a.button2:hover{
+  color:#DDDDDD;
+  border-color:#DDDDDD;
+}
+
+a.button2:active{
+color:#BBBBBB;
+border-color:#BBBBBB;
+}
+
+@media all and (max-width:30em){
+  a.button2{
+    display:block;
+    margin:0.4em auto;
+  }
+}

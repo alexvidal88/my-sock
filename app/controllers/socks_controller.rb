@@ -24,8 +24,12 @@ class SocksController < ApplicationController
 
   def destroy
     @sock.user = current_user
+    if @sock.bookings.nil?
     @sock.destroy
     redirect_to socks_path
+    else
+    redirect_to sock_path(@sock)
+    end
   end
 
   private
