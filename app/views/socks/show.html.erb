@@ -1,8 +1,10 @@
-
-<div class="col-12 colsm-6 col-md-4 mb-3">
+<h1 class="text-muted">Find out more about <%= @sock.name %></h1>
+<hr>
+<div class="col-12 colsm-6 col-md-4 mb-3 border-dark mb-3">
+  <div class="card-body card bg-light">
   <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path(@sock.photo.key)%>)">
   </div>
-  <div class="card-body">
+  <div class="card-body card bg-light">
     <h5 class="card-title"><%= @sock.name %></h5>
     <p class="card-text"><%= @sock.description %></p>
      <p class= "card-text">price: <%= @sock.price %> $AUD</p>
@@ -15,5 +17,6 @@
      <div>
         <a href="" class= "card-link"><%= link_to "Book this sock", new_sock_booking_path(@sock)  %></a>
      </div>
+  </div>
   </div>
 </div>
