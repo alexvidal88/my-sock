@@ -1,10 +1,22 @@
 
 .kilimanjaro_bottom_header_one {
     background-color: white;
+    height:100px; // Replace with the height your footer should be
+    width: 100%; // Don't change
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    position: fixed;
+    bottom: 0pt;
+    left: 0pt;
 }
 
 .section_padding_50 {
     padding: 50px 0;
+    height:100px; // Replace with the height your footer should be
+    width: 1000px; // Visible width of footer
+    margin:auto;
 }
 
 
