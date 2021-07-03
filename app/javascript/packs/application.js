@@ -25,8 +25,9 @@ require("channels")
 import "bootstrap";
 import flatpickr from "flatpickr";
 
-
-import { datePicker } from "./plugins/booking.js"
+import { loadDynamicBannerText } from '../components/banner';
+import { datePicker } from "./plugins/booking.js";
+// import { initUpdateNavbarOnScroll } from '../components/navbar';
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
@@ -34,11 +35,6 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   datePicker();
-});
-
-import { initUpdateNavbarOnScroll } from '../components/navbar';
-
-document.addEventListener('turbolinks:load', () => {
-  // Call your JS functions here
-  initUpdateNavbarOnScroll();
+  loadDynamicBannerText();
+  // initUpdateNavbarOnScroll();
 });
