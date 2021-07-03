@@ -6,7 +6,14 @@
     <h5 class="card-title"><%= @sock.name %></h5>
     <p class="card-text"><%= @sock.description %></p>
      <p class= "card-text">price: <%= @sock.price %> $AUD</p>
-    <a href="#" class="card-link"><%= link_to "Delete sock", sock_path(@sock), method: :delete,  data: { confirm: "Are you sure you want to remove #{@sock.name} from your list"}  %></a>
-    <a href="" class= "card-link"><%= link_to "See bookings", sock_bookings_path(@sock)  %></a>
+     <div>
+       <a href="#" class="card-link"><%= link_to "Delete sock", sock_path(@sock), method: :delete,  data: { confirm: "Are you sure you want to remove #{@sock.name} from your list"}  %></a>
+     </div>
+     <div>
+       <a href="" class= "card-link"><%= link_to "See bookings", sock_bookings_path(@sock)  %></a>
+     </div>
+     <div>
+        <a href="" class= "card-link"><%= link_to "Book this sock", new_sock_booking_path(@sock)  %></a>
+     </div>
   </div>
 </div>
