@@ -3,6 +3,13 @@
     <h3 class="mb-0"> All Bookings for
       <%= link_to @sock.name, sock_path(@sock)  %>
     </h3>
+    <small>
+      <%  @sock.bookings.each do |booking| %>
+        <% if booking.user == current_user %>
+        <%= link_to "Book this sock here" , new_sock_booking_path %>
+        <% end %>
+      <% end %>
+    </small>
   </div>
   <hr>
   <div class="row">
@@ -10,9 +17,7 @@
       <div>
         <small>This sock has no bookings yet.  </small>
       <% if @sock.user != current_user %>
-      <small>
-        <%= link_to "Book this sock here" , new_sock_booking_path %>
-      </small>
+
         <%end %>
       </div>
     <% else %>
