@@ -18,7 +18,7 @@ class BookingsController < ApplicationController
     @booking.sock = @sock
     @booking.status = "Pending owner validation"
     if @booking.save
-      redirect_to sock_path(@sock)
+      redirect_to sock_bookings_path(@sock)
     else
       render :new
     end
@@ -32,7 +32,7 @@ class BookingsController < ApplicationController
 
   def destroy
     @booking.destroy
-    redirect_to root_path
+    redirect_to socks_path
   end
 
   private
