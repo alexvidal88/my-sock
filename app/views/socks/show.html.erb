@@ -9,13 +9,17 @@
     <p class="card-text"><%= @sock.description %></p>
      <p class= "card-text">price: <%= @sock.price %> $AUD</p>
      <div>
+      <% if @sock.user == current_user %>
        <a href="#" class="card-link"><%= link_to "Delete sock", sock_path(@sock), method: :delete,  data: { confirm: "Are you sure you want to remove #{@sock.name} from your list"}  %></a>
+       <% end %>
      </div>
      <div>
        <a href="" class= "card-link"><%= link_to "See bookings", sock_bookings_path(@sock)  %></a>
      </div>
      <div>
+        <% if @sock.user != current_user %>
         <a href="" class= "card-link"><%= link_to "Book this sock", new_sock_booking_path(@sock)  %></a>
+        <% end %>
      </div>
   </div>
   </div>

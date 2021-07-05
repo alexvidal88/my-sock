@@ -1,5 +1,6 @@
 <h1 class="text-muted">Look up for your ideal socks</h1>
 <hr>
+
 <div class="row">
   <% @socks.each do |sock| %>
     <div class="card-body co-12 colsm-6 col-md-4 mb-3">
@@ -10,8 +11,14 @@
         <h5 class="card-title"><%= sock.name %></h5>
         <% end %>
         <p> price: <%= sock.price %> $AUD</p>
+        <% if sock.user == current_user %>
+          <small>This sock is yours</small>
+        <% else %>
+          <small>This sock is posted by <%= sock.user.first_name %></small>
+        <% end %>
       </div>
     </div>
   <% end %>
 </div>
+
 
