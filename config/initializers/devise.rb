@@ -302,7 +302,8 @@ Devise.setup do |config|
   # ActiveSupport.on_load(:devise_failure_app) do
   #   include Turbolinks::Controller
   # end
-
+  config.omniauth :facebook, "969752050232703", "fe906de0c6868945022190df1288"
+  callback_url =  "http://localhost:3000/auth/facebook/callback"
   # ==> Configuration for :registerable
 
   # When set to false, does not sign a user in automatically after their password is
