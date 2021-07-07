@@ -11,6 +11,7 @@
         <h5 class="card-title"><%= sock.name %></h5>
         <% end %>
         <p> price: <%= sock.price %> $AUD</p>
+        <p>address: <%= sock.address %></p>
         <% if sock.user == current_user %>
           <small>This sock is yours</small>
         <% else %>
@@ -22,3 +23,8 @@
 </div>
 
 
+<div id="map"
+ style="width: 100%; height: 600px;"
+ data-markers="<%= @markers.to_json %>"
+ data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
