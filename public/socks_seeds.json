@@ -19,26 +19,30 @@
   // },
   {
     "name":"Les Chaussettes",
-    "price":"750.09",
+    "price":"4",
     "description":"beautifull socks, size 42",
+    "address": "16 Villa Gaudelet, Paris",
     "photo":"https://i.ebayimg.com/images/g/9lUAAOSwIbBgtbkC/s-l500.jpg"
   },
   {
     "name":"Dirty socks",
-    "price":"00.02",
+    "price":"2",
     "description":"used socks for weird people",
+    "address": "16 Villa Gaudelet, Paris",
     "photo":"https://thumbs.dreamstime.com/z/smelly-dirty-socks-isolated-white-background-active-training-42194523.jpg"
   },
   {
     "name":"flippers socks",
-    "price":"888.88",
+    "price":"2",
     "description":"socks for surfing or water activities",
+    "address": "16 Villa Gaudelet, Paris",
     "photo":"https://i.ebayimg.com/images/g/9RYAAOSwFO1cDQiG/s-l300.jpg"
   },
   {
     "name":"holly holes",
-    "price":"654.00",
+    "price":"3",
     "description":"for a better aeration during effort",
+    "address": "16 Villa Gaudelet, Paris",
     "photo":"https://thumbs.dreamstime.com/b/worn-socks-holes-fingers-sticking-out-them-worn-socks-holes-fingers-sticking-out-them-economic-140956230.jpg"
   }
 ]}

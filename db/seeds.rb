@@ -19,7 +19,8 @@ new_socks['socks'].each do |new_sock|
   created_sock = Sock.new(
     name: new_sock['name'],
     price: new_sock['price'],
-    description: new_sock['description']
+    description: new_sock['description'],
+    address: new_sock["address"]
   )
 
 

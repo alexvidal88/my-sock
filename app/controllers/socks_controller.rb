@@ -4,6 +4,13 @@ class SocksController < ApplicationController
 
   def index
     @socks = Sock.all
+
+    @markers = @socks.geocoded.map do |sock|
+      {
+        lat: sock.latitude,
+        lng: sock.longitude
+      }
+    end
   end
 
   def new
@@ -24,18 +31,18 @@ class SocksController < ApplicationController
 
   def destroy
     @sock.user = current_user
-    if @sock.bookings.nil?
-    @sock.destroy
-    redirect_to socks_path
+    if @sock.bookings.empty?
+      @sock.destroy
+      redirect_to socks_path
     else
-    redirect_to sock_path(@sock)
+      redirect_to sock_path(@sock)
     end
   end
 
   private
 
   def sock_params
-    params.require(:sock).permit(:name, :price, :description, :photo)
+    params.require(:sock).permit(:name, :price, :description, :address, :photo)
   end
 
   def set_sock
