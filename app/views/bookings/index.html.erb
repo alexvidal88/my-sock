@@ -31,6 +31,7 @@
         <% if booking.user == current_user %>
         <a href="#" class="card-link"><%= link_to "Delete Booking", booking_path(booking), method: :delete,  data: { confirm: "Are you sure you want to remove it from your list"}  %>
         </a>
+        <%= link_to "Review this booking", new_booking_review_path(booking)  %>
         <% end %>
         <% else %>
           <p><%= booking.user.first_name %> booked this sock</p>
@@ -40,6 +41,7 @@
           <% if booking.user == current_user %>
           <a href="#" class="card-link"><%= link_to "Delete Booking", booking_path(booking), method: :delete,  data: { confirm: "Are you sure you want to remove it from your list"}  %>
           </a>
+
         <% end %>
         <% end %>
       </div>

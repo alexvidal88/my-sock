@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   resources :socks, except: [:edit, :update] do
     resources :bookings
   end
-  resources :bookings, only: :destroy
+  resources :bookings, only: :destroy do
+    resources :reviews, only: [:create, :new]
+  end
 end
