@@ -23,16 +23,15 @@ require("channels")
 
 // External imports
 import "bootstrap";
-import flatpickr from "flatpickr";
-import { loadDynamicBannerText } from '../plugins/type';
+import { loadDynamicBannerText } from '../plugins/banner';
 import { datePicker } from "../plugins/flatpicker";
 import { initMapbox } from '../plugins/mapbox';
-// import { initUpdateNavbarOnScroll } from '../components/navbar';
-// Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
+import { initAutocomplete } from "../plugins/init_autocomplete";
+
 
 document.addEventListener('turbolinks:load', () => {
   datePicker();
   initMapbox();
+  initAutocomplete();
   loadDynamicBannerText();
 });

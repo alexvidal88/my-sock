@@ -8,7 +8,8 @@ class SocksController < ApplicationController
     @markers = @socks.geocoded.map do |sock|
       {
         lat: sock.latitude,
-        lng: sock.longitude
+        lng: sock.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { sock: sock })
       }
     end
   end
