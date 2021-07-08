@@ -1,3 +1,4 @@
+
 <h1 class="text-muted">Find out more about <%= @sock.name %></h1>
 <hr>
 <div class="col-12 colsm-6 col-md-4 mb-3 border-dark mb-3">
@@ -25,9 +26,24 @@
   </div>
   </div>
 </div>
+<% @sock.reviews.each do |review|%>
 <div class="col-12 colsm-6 col-md-4 mb-3 border-dark mb-3">
   <div class="card-body card bg-light">
-
+    <%= review.content %>
+    <br>
+    <%= review.stars %>
+    <br>
+    <%= review.created_at %>
+    <br>
+    <%= review.booking.user.first_name %>
 
   </div>
 </div>
+<% end %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+

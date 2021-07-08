@@ -23,6 +23,21 @@
     "description":"beautifull socks, size 42",
     "address": "16 Villa Gaudelet, Paris",
     "photo":"https://i.ebayimg.com/images/g/9lUAAOSwIbBgtbkC/s-l500.jpg"
+    "bookings":[
+      {
+        "start_date": "03.02.2020",
+        "end_date": "05.02.2020",
+        "status": "pending",
+        // "user_id": "",
+        // "sock_id":"",
+        "review":[
+          {
+            "content": "really good quality",
+            "stars": "3",
+          }
+        ]
+      }
+    ]
   },
   {
     "name":"Dirty socks",
