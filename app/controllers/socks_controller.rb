@@ -3,7 +3,6 @@ class SocksController < ApplicationController
   before_action :set_sock, only: [:show, :edit, :update, :destroy]
 
   def index
-
     if params[:query].present?
       sql_query = " \
         socks.name @@ :query \
