@@ -15,3 +15,20 @@
   margin: 10px 10px;
   padding: 10px 10px;
 }
+.category-show {
+  background-size: auto;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-repeat: no-repeat;
+
+}
+.image {
+  height: 300px;
+  width: auto;
+  color: white;
+}
