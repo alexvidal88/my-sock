@@ -21,28 +21,28 @@
     "name":"Les Chaussettes",
     "price":"4",
     "description":"beautifull socks, size 42",
-    "address": "16 Villa Gaudelet, Paris",
+    "address": "1009 Rathdowne st, Melbourne",
     "photo":"https://i.ebayimg.com/images/g/9lUAAOSwIbBgtbkC/s-l500.jpg"
   },
   {
     "name":"Dirty socks",
     "price":"2",
     "description":"used socks for weird people",
-    "address": "16 Villa Gaudelet, Paris",
+    "address": "8 Greig court, Melbourne",
     "photo":"https://thumbs.dreamstime.com/z/smelly-dirty-socks-isolated-white-background-active-training-42194523.jpg"
   },
   {
     "name":"flippers socks",
     "price":"2",
     "description":"socks for surfing or water activities",
-    "address": "16 Villa Gaudelet, Paris",
+    "address": "25 Tennyson street, Melbourne",
     "photo":"https://i.ebayimg.com/images/g/9RYAAOSwFO1cDQiG/s-l300.jpg"
   },
   {
     "name":"holly holes",
     "price":"3",
     "description":"for a better aeration during effort",
-    "address": "16 Villa Gaudelet, Paris",
+    "address": "34 Jhon street, Melbourne",
     "photo":"https://thumbs.dreamstime.com/b/worn-socks-holes-fingers-sticking-out-them-worn-socks-holes-fingers-sticking-out-them-economic-140956230.jpg"
   }
 ]}
