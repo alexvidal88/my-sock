@@ -25,6 +25,8 @@ gem 'devise'
 # Use Active Storage variant
 gem 'geocoder'
 
+gem 'ui_faces'
+
 # gem 'searchkick'
 
 gem 'omniauth-facebook'
