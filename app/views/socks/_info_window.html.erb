@@ -1,3 +1,11 @@
-<h2><%= sock.name %></h2>
-<p><%= sock.address %></p>
 
+<div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path(sock.photo.key)%>)">
+    </div>
+    <div class="card-body card bg-light">
+      <h5 class="card-title"><%= sock.name %></h5>
+      <p class="card-text"><%= sock.description %></p>
+       <p class= "card-text">price: <%= sock.price %> $AUD</p>
+       <p class= "card-text">address: <%= sock.address %></p>
+    </div>
+    </div>
+</div>

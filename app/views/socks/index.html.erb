@@ -1,10 +1,12 @@
 <h1 class="text-muted">Look up for your ideal socks</h1>
 
-<%= render "search_form" %>
 
-<div class="row">
+  <%= render "search_form" %>
+
+<div class="content">
+  <div class="cards">
   <% @socks.each do |sock| %>
-    <div class="card-body co-12 colsm-6 col-md-4 mb-3">
+    <div class="card">
       <%= link_to sock_path(sock), class:'text-decoration-none' do %>
       <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path(sock.photo.key)%>)">
       </div>
@@ -21,13 +23,14 @@
       </div>
     </div>
   <% end %>
+  </div>
+
+  <div id="map"
+   style="width: 100%; height: 600px;"
+   data-markers="<%= @markers.to_json %>"
+   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>
 
-
-<div id="map"
- style="width: 100%; height: 600px;"
- data-markers="<%= @markers.to_json %>"
- data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
 
 
