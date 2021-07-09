@@ -25,7 +25,7 @@ gem 'devise'
 # Use Active Storage variant
 gem 'geocoder'
 
-gem 'searchkick'
+# gem 'searchkick'
 
 gem 'omniauth-facebook'
 # gem 'image_processing', '~> 1.2'
