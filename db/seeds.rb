@@ -12,7 +12,7 @@
 #   t.text "description"
 #
 
-user = User.create(first_name: "user", last_name: "test", email: "user@user.com", password: "password")
+user = User.create!(first_name: "user", last_name: "test", email: "user@user.com", password: "password")
 data = File.read('public/socks_seeds.json')
 new_socks = JSON.parse(data)
 new_socks['socks'].each do |new_sock|
