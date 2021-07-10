@@ -1,4 +1,5 @@
 <hr>
+
 <div class="container">
   <h1 class="text-muted"><%= @sock.name %></h1>
   <div>
@@ -11,4 +12,44 @@
   <p class=""> <strong>reviews:</strong> <%= @sock.reviews.count %></p>
   <div class="image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path(@sock.photo.key)%>)"></div>
   <h3><%= @sock.price %></h3>
+
+<div class="col-12 colsm-6 col-md-4 mb-3 border-dark mb-3">
+  <div class="card-body card bg-light">
+  <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path(@sock.photo.key)%>)">
+  </div>
+  <div class="card-body card bg-light">
+    <h5 class="card-title"><%= @sock.name %></h5>
+    <p class="card-text"><%= @sock.description %></p>
+     <p class= "card-text">price: <%= @sock.price %> $AUD</p>
+     <p class= "card-text">address: <%= @sock.address %></p>
+     <div>
+      <% if @sock.user == current_user %>
+       <a href="#" class="card-link"><%= link_to "Delete sock", sock_path(@sock), method: :delete,  data: { confirm: "Are you sure you want to remove #{@sock.name} from your list"}  %></a>
+       <% end %>
+     </div>
+     <div>
+       <a href="" class= "card-link"><%= link_to "See bookings", sock_bookings_path(@sock)  %></a>
+     </div>
+     <div>
+        <% if @sock.user != current_user %>
+        <a href="" class= "card-link"><%= link_to "Book this sock", new_sock_booking_path(@sock)  %></a>
+        <% end %>
+     </div>
+  </div>
+  </div>
+</div>
+
+<% @sock.reviews.each do |review|%>
+<div class="col-12 colsm-6 col-md-4 mb-3 border-dark mb-3">
+  <div class="card-body card bg-light">
+    <%= review.content %>
+    <br>
+    <%= review.stars %>
+    <br>
+    <%= review.created_at %>
+    <br>
+    <%= review.booking.user.first_name %>
+
+  </div>
+
 </div>

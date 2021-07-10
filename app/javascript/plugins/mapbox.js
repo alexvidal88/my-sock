@@ -6,7 +6,7 @@ const buildMap = (mapElement) => {
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
   return new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v10',
+    style: 'mapbox://styles/alexvidal88/ckqw7l5d9115f19nzhg19jl62',
     center: [-74.5, 40], // starting position [lng, lat]
     zoom: 0.01 // starting zoom
   });
@@ -14,6 +14,7 @@ const buildMap = (mapElement) => {
 
 const addMarkersToMap = (map, markers) => {
   markers.forEach((marker) => {
+    console.log(marker)
     const popup = new mapboxgl.Popup().setHTML(marker.info_window);
 
     new mapboxgl.Marker()

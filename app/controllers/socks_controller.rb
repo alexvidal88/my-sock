@@ -3,15 +3,24 @@ class SocksController < ApplicationController
   before_action :set_sock, only: [:show, :edit, :update, :destroy]
 
   def index
-    @socks = Sock.all
-
-    @markers = @socks.geocoded.map do |sock|
-      {
-        lat: sock.latitude,
-        lng: sock.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { sock: sock })
-      }
+    if params[:query].present?
+      sql_query = " \
+        socks.name @@ :query \
+        OR socks.description @@ :query \
+        OR socks.address @@ :query \
+        OR users.first_name @@ :query \
+      "
+      @socks = Sock.joins(:user).where(sql_query, query: "%#{params[:query]}%")
+    else
+      @socks = Sock.all
     end
+      @markers = @socks.geocoded.map do |sock|
+        {
+          lat: sock.latitude,
+          lng: sock.longitude,
+          info_window: render_to_string(partial: "info_window", locals: { sock: sock })
+        }
+      end
   end
 
   def new
