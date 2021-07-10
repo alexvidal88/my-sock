@@ -8,13 +8,12 @@
   display: flex;
 }
 
-
-
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
-  padding: 16px;
+  padding: 10px;
+  padding-top: 0px;
   flex-grow: 1;
 }
 
