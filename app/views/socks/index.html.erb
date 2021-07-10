@@ -2,9 +2,8 @@
 
 
   <%= render "search_form" %>
-
 <div class="content">
-  <div class="cards">
+  <div class="cards my-5">
   <% @socks.each do |sock| %>
     <div class="card">
       <%= link_to sock_path(sock), class:'text-decoration-none' do %>
@@ -31,6 +30,9 @@
    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>
+<h1>text</h1>
+
+
 
 
 
