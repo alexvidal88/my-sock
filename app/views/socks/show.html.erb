@@ -20,16 +20,30 @@
   </div>
   <br>
   <div class="card-category-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path(@sock.photo.key)%>)"></div>
+    <div class="link">
+      <div>
+        <% if @sock.user != current_user %>
+        <h4 href="" class= "card-link"><%= link_to "Book this sock", new_sock_booking_path(@sock)  %></h4>
+        <% end %>
+     </div>
+     <div>
+      <% if @sock.user == current_user %>
+       <h4 href="#" class="card-link"><%= link_to "Delete sock", sock_path(@sock), method: :delete,  data: { confirm: "Are you sure you want to remove #{@sock.name} from your list"}  %></h4>
+       <% end %>
+     </div>
+     <div>
+       <h5 href="" class= "card-link"><%= link_to "See bookings", sock_bookings_path(@sock)  %></h5>
+     </div>
+    </div>
   <div class="card-reviews">
     <p class=""> <strong>posted by:</strong> <%= @sock.user.first_name %></p>
     <p class=""> <strong>description:</strong> "<%= @sock.description %>"</p>
   </div>
-
-
-    <% if @sock.reviews.count != 0 %>
+  <h3>Reviews:</h3>
+   <% if @sock.reviews.count != 0 %>
     <% @sock.reviews.each do |review|%>
         <div class="card-reviews">
-          <div class="card-body">
+          <div class="card-body-show">
             <p>"<%= review.content %>"</p>
             <p><strong>stars:</strong> <%= review.stars %>/5</p>
             <%= review.created_at %>

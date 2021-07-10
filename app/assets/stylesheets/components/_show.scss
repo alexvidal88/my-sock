@@ -12,3 +12,12 @@
 .sock-details {
   display: inline-block;
 }
+.link {
+  display: inline;
+  white-space: nowrap;
+}
+.card-body-show {
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 2px 2px;
+}
