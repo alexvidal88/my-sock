@@ -1,5 +1,11 @@
-<%= simple_form_for([@booking, @review]) do |f| %>
+
+<div class="sign">
+  <%= simple_form_for([@booking, @review]) do |f| %>
     <%= f.input :content %>
     <%= f.input :stars, collection: (0..5) %>
-    <%= f.submit %>
-<% end %>
+    <div class="form-actions text-center m-auto">
+      <%= f.submit , :class => "btn btn-primary btn-lg"%>
+    </div>
+  <% end %>
+</div>
+

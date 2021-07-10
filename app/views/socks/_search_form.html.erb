@@ -1,14 +1,14 @@
-
-<%= form_tag socks_path, method: :get do %>
+<div class="search form-actions text-center m-auto">
+  <%= form_tag socks_path, method: :get do %>
   <div class= "searchbar">
     <%= text_field_tag :query,
     params[:query],
     class: "form-control",
     placeholder: "Find your sock"
   %>
-    <div class= search-button>
-      <%= submit_tag "Search", class: "btn btn-outline-primary" %>
-    </div>
+    <%= submit_tag "Search" %>
   </div>
 <% end %>
+</div>
+
 
